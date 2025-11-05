@@ -1,5 +1,5 @@
 
 
-# SodaBlog v11 — Astro + Tailwind 
+# SodaBlog  — Astro + Tailwind 
 
 
