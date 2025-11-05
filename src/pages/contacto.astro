@@ -1,0 +1,47 @@
+
+---
+import "../styles/globals.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Contacto — SodaBlog</title>
+  </head>
+  <body>
+    <Header />
+    <main class="container py-8">
+      <h1 class="text-3xl font-bold mb-6">Contacto</h1>
+      <div class="grid md:grid-cols-3 gap-6 items-start">
+        <section class="card p-5 md:col-span-1">
+         
+          
+          <h2 class="text-xl font-semibold mb-3">Escríbenos</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium mb-1">Nombre</label>
+              <div class="h-10 rounded-lg border border-slate-300/60 dark:border-slate-600/60 bg-slate-50 dark:bg-slate-900/30 px-3 flex items-center text-slate-500">Tu nombre</div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1">Email</label>
+              <div class="h-10 rounded-lg border border-slate-300/60 dark:border-slate-600/60 bg-slate-50 dark:bg-slate-900/30 px-3 flex items-center text-slate-500">tu@correo.com</div>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium mb-1">Mensaje</label>
+              <div class="h-32 rounded-lg border border-slate-300/60 dark:border-slate-600/60 bg-slate-50 dark:bg-slate-900/30 px-3 py-2 text-slate-500">Escribe tu mensaje...</div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="inline-block px-5 py-2 rounded-lg border border-slate-300/60 dark:border-slate-600/60 opacity-60 select-none">Enviar (visual)</span>
+          </div>
+        </section>
+      </div>
+      <div class="mt-6 rounded-xl overflow-hidden border border-slate-200/60 dark:border-slate-700/60">
+        <img src="/images/soda-trio.jpg" alt="Imagen de referencia" class="w-full h-56 object-cover" />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

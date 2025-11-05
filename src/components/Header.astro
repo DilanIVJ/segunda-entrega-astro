@@ -1,0 +1,24 @@
+
+---
+const nav = [
+  { href: '/', label: 'Inicio' },
+  { href: '/posts', label: 'Blog' },
+  { href: '/discografia', label: 'Discografía' },
+  { href: '/about', label: 'Acerca de' },
+  { href: '/contacto', label: 'Contacto' }
+];
+import "../styles/globals.css";
+---
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/70 backdrop-blur border-b border-slate-200/60 dark:border-slate-700/60">
+  <div class="container flex items-center justify-between py-3">
+    <a href="/" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+      <img src="/images/logo.png" alt="SodaBlog" class="w-8 h-8 object-contain" />
+      <span>SodaBlog</span>
+    </a>
+    <nav class="flex gap-4 text-sm">
+      {nav.map((i) => (
+        <a class="hover:text-soda-sky transition" href={i.href}>{i.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

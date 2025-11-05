@@ -1,0 +1,13 @@
+
+@import "tailwindcss";
+
+:root { color-scheme: light dark; }
+body { @apply bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased pt-20 pb-24; }
+.container { @apply max-w-6xl mx-auto px-4; }
+.prose h1, .prose h2, .prose h3 { @apply font-bold; }
+/* Card hover simple */
+.card { @apply rounded-xl overflow-hidden bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60 transition; }
+.card:hover { @apply shadow-lg scale-[1.02] border-[#38bdf8]/60; }
+
+.card img { @apply transition-transform duration-500; }
+.card:hover img { @apply scale-105; }

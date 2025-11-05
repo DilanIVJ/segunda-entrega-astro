@@ -1,0 +1,37 @@
+
+---
+import "../styles/globals.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Discografía — SodaBlog</title>
+  </head>
+  <body>
+    <Header />
+    <main class="container py-8">
+      <h1 class="text-3xl font-bold mb-6">Discografía destacada</h1>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article class="card p-4">
+          <img src="/images/discos/nada-personal.jpg" alt="Nada Personal" class="rounded-md mb-3 h-40 w-full object-cover"/>
+          <h3 class="font-semibold">Nada Personal (1985)</h3>
+          <p class="text-sm opacity-80">Segundo álbum, consolidación regional.</p>
+        </article>
+        <article class="card p-4">
+          <img src="/images/discos/signos.jpg" alt="Signos" class="rounded-md mb-3 h-40 w-full object-cover"/>
+          <h3 class="font-semibold">Signos (1986)</h3>
+          <p class="text-sm opacity-80">Refinamiento sonoro y poético.</p>
+        </article>
+        <article class="card p-4">
+          <img src="/images/discos/doble-vida.jpg" alt="Doble Vida" class="rounded-md mb-3 h-40 w-full object-cover"/>
+          <h3 class="font-semibold">Doble Vida (1988)</h3>
+          <p class="text-sm opacity-80">Producción internacional en NYC.</p>
+        </article>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

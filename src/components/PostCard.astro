@@ -1,0 +1,14 @@
+
+---
+const { post } = Astro.props;
+import "../styles/globals.css";
+const cover = post?.cover || "/images/soda-trio.jpg";
+---
+<a href={`/posts/${post.slug}`} class="card block">
+  <img src={cover} alt={post.title} class="w-full h-36 sm:h-40 object-cover" />
+  <div class="p-3">
+    <h3 class="text-base font-semibold mb-1">{post.title}</h3>
+    <p class="text-sm text-slate-600 dark:text-slate-300">{post.excerpt}</p>
+    <div class="mt-2 text-[11px] text-slate-500">{post.date}</div>
+  </div>
+</a>

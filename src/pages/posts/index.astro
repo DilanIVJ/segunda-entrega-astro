@@ -1,0 +1,27 @@
+
+---
+import "../../styles/globals.css";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PostCard from "../../components/PostCard.astro";
+import posts from "../../data/posts.json";
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Blog — SodaBlog</title>
+  </head>
+  <body>
+    <Header />
+    <main class="container py-8">
+      <h1 class="text-3xl font-bold mb-6">Blog</h1>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {posts.slice(0,8).map((post) => (
+          <PostCard post={post} />
+        ))}
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,42 @@
+
+---
+import "../styles/globals.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PostCard from "../components/PostCard.astro";
+import posts from "../data/posts.json";
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>SodaBlog — Blog de Soda Stereo</title>
+  </head>
+  <body>
+    <Header />
+    <main class="container py-8">
+      <section class="mb-10">
+        <div class="grid md:grid-cols-2 gap-6 items-center">
+          <div>
+            <h1 class="text-4xl font-extrabold tracking-tight mb-3">Soda Stereo: historia y discos</h1>
+            <p class="text-slate-600 dark:text-slate-300">Blog con artículos, discografía y momentos clave.</p>
+          </div>
+          <img src="/images/soda-trio.jpg" alt="Soda Stereo" class="rounded-xl border border-slate-200/60 dark:border-slate-700/60"/>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4">Artículos destacados</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {posts.slice(0,3).map((post) => (
+            <PostCard post={post} />
+          ))}
+        </div>
+        <div class="mt-6">
+          <a href="/posts" class="inline-block px-5 py-2 rounded-lg border border-slate-300/60 dark:border-slate-600/60 hover:bg-soda-sky/10 transition">Leer más artículos</a>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
